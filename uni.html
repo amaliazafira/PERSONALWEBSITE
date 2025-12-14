@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Video</title>
+    <style>
+        /* Apply background image to body */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('hsbg.jpg'); /* Replace with your background image path */
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            background-position: center center; /* Center the background image */
+            background-attachment: fixed; /* Fix the background while scrolling */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Ensure content is aligned properly */
+            height: 100vh; /* Ensure full screen height */
+            color: rgb(97, 47, 47); /* Make text white to stand out on the background */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-top: 50px; /* Add some margin to keep header visible */
+            z-index: 10;
+            position: relative;
+        }
+
+        header h2 {
+            font-size: 2em;
+            color: #582c2c;
+        }
+
+        /* Video container */
+        .video-container {
+            margin-top: 30px;
+            text-align: center;
+            max-width: 80%; /* Ensures the video takes up 80% of the screen */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(165, 116, 131, 0.829); /* Semi-transparent background for readability */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            margin-bottom: 30px; /* Add space between video containers */
+        }
+
+        /* Video */
+        video {
+            width: 100%; /* Set the width to 100% of its container */
+            height: auto; /* Maintain aspect ratio */
+            border: none; /* Remove any border */
+            border-radius: 8px; /* Optional: rounded corners for the video */
+            box-shadow: none; /* Remove shadow */
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #F1E4D3;
+            color: #3E5C4D;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #3E5C4D;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>˚ ༘♡ ⋆｡˚University Video˚ ༘♡ ⋆｡˚</h2>
+    </header>
+
+    <!-- First Video container with MP4 video -->
+    <div class="video-container">
+        <h3>⋆｡˚University Diaries</h3>
+        <video controls>
+            <source src="uni.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Back button to return to the education journey page -->
+    <div>
+        <a href="educate.html" class="back-btn">Back to Education Journey</a>
+    </div>
+</body>
+</html>

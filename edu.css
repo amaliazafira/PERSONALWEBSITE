@@ -1,0 +1,556 @@
+ body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8d3a3a;                                          
+        }
+
+        header {
+            background-image: url('hedu.png'); /* Apply background to the header */
+            background-size: cover;
+            background-position: center;
+            height: 350px; /* Set the height of the header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(70, 9, 9); /* Make sure the text is readable on the background */
+        }
+
+        header h2 {
+            font-size: 50px; /* Increase the font size of the header text */
+            margin: 0;
+        }
+
+        /* Navbar Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #A3B59C; /* Adjust color */
+        }
+
+        nav .nav-logo h2 {
+            font-size: 30px;
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #F1E4D3; /* Light beige on hover */
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: rgb(215, 186, 186);
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content h2 {
+            margin-bottom: 30px;
+            font-size: 30px;
+            color: #333; /* Text color for content */
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        /* Education Section Styles */
+        .education {
+            background-color: #b85c5c;
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Education Container */
+        .education-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        /* Individual Education Item Styles */
+        .education-item {
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .education-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* School Logo Styles */
+        .school-logo {
+            width: 100px;  /* Set the width to a fixed size */
+            height: 100px; /* Set the height to a fixed size */
+            object-fit: contain; /* Ensure the logos maintain their aspect ratio */
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+/* General Body Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('m.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Education Section Navbar Styling */
+.education-navbar {
+    background-color: #bc978e; /* Greenish background */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(190, 138, 138, 0.704); /* Subtle shadow for depth */
+    border-bottom: 3px solid #F1E4D3; /* Soft border */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.education-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+.education-nav-menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.education-nav-link {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    font-size: 16px; /* Adjust font size to medium */
+    font-weight: 600;
+    padding: 8px 18px; /* Reduced padding for smaller circles */
+    border-radius: 25px; /* Smooth rounded corners */
+    background-color: #F0C9C1; /* Soft peach background */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.education-nav-link:hover {
+    background-color: #F1E4D3; /* Light beige background on hover */
+    color: #3E5C4D; /* Darker green text on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for hover effect */
+}
+
+.education-nav-link:active {
+    transform: scale(0.98); /* Slight scale effect on click */
+}
+
+/* Active Link Styling */
+.education-nav-menu li a.active {
+    background-color: #15412b; /* Darker background for active link */
+    color: #fff;
+    font-weight: 700; /* Bold for active link */
+}
+
+
+/* Content Section Styles */
+.content {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Education Section Styling */
+.education {
+    background-color: #c79e9e;
+    padding: 60px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Title Styling */
+.education h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #3c1717;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Education Container */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dynamic grid layout */
+    gap: 40px; /* Spacing between items */
+    margin-top: 30px;
+    justify-items: center; /* Ensure items are centered in their cells */
+}
+
+/* Timeline Item */
+.education-item {
+    width: 100%; /* Ensure full width */
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure clean edges */
+}
+
+/* Hover effect to lift the card */
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title of each education item */
+.education-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Description Styling */
+.education-item p {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* School Logo Styling */
+.school-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for school logo */
+.school-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Link Styling */
+.education-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f1c6c6;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover effect for links */
+.education-item a:hover {
+    background-color: #f1e4d3;
+    color: #3e5c4d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Slider Styling */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Set width to accommodate 3 images */
+    animation: slide 500s infinite linear; /* Slow sliding animation */
+}
+
+.slide {
+    width: 33.33%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Remove link default styling and style it normally */
+.education-nav-link {
+    color: inherit; /* Inherit color from the surrounding text */
+    font-weight: bold; /* Make the link bold */
+    text-decoration: none; /* Remove underline */
+}
+
+.education-nav-link:hover {
+    color: inherit; /* Keep the same color on hover */
+    text-decoration: none; /* Keep it without underline */
+}
+/* Change the link color */
+.education-item a {
+    color: #ffffff; /* You can choose a color that suits your design */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+
+/* Link hover effect */
+.education-item a:hover {
+    color: #4c3a21; /* Choose a lighter color for the hover effect */
+    text-decoration: underline; /* Optional: underline when hovered */
+}
+/* Animation for Progress Bars */
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--progress-width);
+    }
+}
+
+.skill-item .progress {
+    animation: progressBar 2s ease-in-out forwards;
+    --progress-width: 0%; /* Default to 0% */
+}
+
+.skill-item .design {
+    --progress-width: 80%;
+}
+
+.skill-item .english {
+    --progress-width: 89%;
+}
+
+.skill-item .coding {
+    --progress-width: 60%;
+}
+
+.skill-item .editing {
+    --progress-width: 70%;
+}
+
+
+/* Skills Section */
+.skills {
+    text-align: center; /* Center the title */
+    padding: 20px;
+    color: #333; /* Change the text color for better contrast */
+    background-color: #eab6b6;
+    border-radius: 8px;
+    margin-top: 50px; /* Add space above the skills section */
+}
+
+.skills h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold; /* Make the title bold */
+}
+
+.skills b {
+    font-size: 18px;
+    margin-bottom: 25px;
+    display: block; /* Ensure "The level of my soft skills." is on its own line */
+    font-weight: normal;
+}
+
+/* Skills Container: Layout for Vertical Display */
+.skills-container {
+    display: flex;
+    flex-direction: column; /* Arrange skills in a vertical column */
+    gap: 40px; /* Increase space between each skill item */
+    align-items: center; /* Center the skills in the container */
+}
+
+/* Individual Skill Item */
+.skill-item {
+    width: 80%; /* Adjust width to a comfortable size */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for each item */
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    background-color: #ddd; /* Light grey background for progress bar */
+    border-radius: 8px;
+    height: 15px; /* Set height for progress bars */
+    width: 100%; /* Make the progress bar full width */
+}
+
+.progress {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+/* Individual Skill Progress Bars */
+.design {
+    background-color: #ff039a; /* Pink */
+    width: 80%;
+}
+
+.english {
+    background-color: #be3181; /* Purple */
+    width: 89%;
+}
+
+.coding {
+    background-color: #dd5b96; /* Light pink */
+    width: 65%;
+}
+
+.editing {
+    background-color: #fc9dd9; /* Light pink */
+    width: 70%;
+}
+
+/* Skill Percentage Styling */
+.skill-percentage {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+    color: #333;
+    margin-top: 5px;
+}
+/* Hover Effect for Software Tools */
+.tool-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-item:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the Software Tools section */
+.software-tools {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #e7babd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.software-tools h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.software-tools p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tools-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tool-item {
+    text-align: center;
+    width: 120px; /* Adjust this value to make the items smaller/bigger */
+    padding: 10px;
+    background-color: rgba(183, 104, 142, 0.8); /* Semi-transparent background for each tool */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for each item */
+}
+
+.tool-item img {
+    width: 50px; /* Set width for icons */
+    height: 50px; /* Set height for icons */
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    font-size: 14px;
+    font-weight: bold;
+}/* Image size in Software Tools */
+.tool-item img {
+    width: 60px; /* Adjust width to make the image smaller or larger */
+    height: 60px; /* Adjust height to make the image square */
+    object-fit: contain; /* Maintain aspect ratio of the image */
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+  .h2 {
+    text-align: center;
+    font-family: "Poppins", cursive;
+    font-size: 28px;
+    color: #b54584;
+}                                
+
+.content-section.top {
+    background-color: #ffffff;
+}
+
+.content-section.bottom {
+    background-color: #ffd6e8;
+}
+
