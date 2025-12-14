@@ -1,0 +1,297 @@
+
+/* Style for dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Menu Button style */
+.back-home {
+  background-color: #ecbcd8;
+  border-color: #ecbcd8;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+}
+
+/* Dropdown content style */
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 40px;  /* Adjusted to provide some space below the button */
+  left: 0;
+  background-color: #d16080;
+  min-width: 160px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(155, 63, 63, 0.778);
+  z-index: 1000; /* Ensures it sits on top */
+  border-radius: 5px;
+  width: 200px; /* Make sure the links fit nicely */
+}
+
+/* Dropdown links styling */
+.dropdown-content a {
+  color: rgb(118, 42, 65);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Highlight dropdown link on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Show dropdown when hovering over menu */
+.dropdown:hover .dropdown-content {
+  display: block; /* Show when hovering over the button */
+}
+
+/* Show dropdown when clicking on the button */
+.dropdown .back-home:focus + .dropdown-content,
+.dropdown:hover .dropdown-content {
+  display: block; /* Ensure it shows on click as well */
+}
+
+/* Ensure links are clickable even when hovered */
+.dropdown-content a {
+  pointer-events: auto;
+}
+
+
+body {
+    background-image: url('bggal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+audio {
+    width: 50%; /* Adjust this value to make the player smaller or larger */
+    max-width: 300px; /* Ensure it doesn't grow too large */
+    margin: 20px 0; /* Add space around the audio player */
+    display: block; /* Ensure it’s on a new line */
+    margin-left: auto; /* Center-align horizontally */
+    margin-right: auto; /* Center-align horizontally */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: darksalmon;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.top-content {
+    background-color: rgb(235, 191, 191);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    height: 100%;
+    background-color: rgb(208, 182, 148);
+    line-height: 60px;
+    padding: 0 50px;
+    color: beige;
+}
+
+label {
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: rgb(106, 6, 56);
+    cursor: pointer;
+    transition: color .5s;
+}
+
+label:hover {
+    color: blanchedalmond;
+}
+
+.photo-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.pic {
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.pic::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+}
+
+.pic:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.pic:hover::after {
+    height: 100%;
+}
+
+.pic:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+
+#check1:checked ~ .container .photo-gallery .pic {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+#check2:checked ~ .container .photo-gallery .Me {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check2:checked ~ .container .photo-gallery .Cafes,
+#check2:checked ~ .container .photo-gallery .friends {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+#check3:checked ~ .container .photo-gallery .friends {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check3:checked ~ .container .photo-gallery .Cafes,
+#check3:checked ~ .container .photo-gallery .me {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+#check4:checked ~ .container .photo-gallery .Cafes {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check4:checked ~ .container .photo-gallery .friends,
+#check4:checked ~ .container .photo-gallery .me {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+}
+
+/* Lightbox Modal Styling */
+.lightbox-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it sits on top */
+}
+
+.lightbox-modal img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+</style>
+
+</body>
+</html>
