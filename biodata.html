@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zafira's Biodata</title>
+    <link rel="stylesheet" href="biocss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<header>
+    <nav class="navbar section-content">
+        <a href="#" class="nav-logo">
+            <h2 class="logo-text">🎀Zafira's Biodata</h2>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="indexass.html" class="nav-link">Home</a></li>
+            <li><a href="biodata.html" class="nav-link">About me</a></li>
+            <li><a href="fav.html" class="nav-link">Favorites</a></li>
+            <li><a href="educate.html" class="nav-link">Education</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+<button class="popup-btn">Click Me</button>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Welcome to my Bio!</h2>
+        <p>I'm Zafira, and I love working with tech and culture.</p>
+    </div>
+</div>
+<script>
+    const popup = document.getElementById("popup");
+const popupBtn = document.querySelector(".popup-btn");
+const closeBtn = document.querySelector(".close-btn");
+
+popupBtn.onclick = () => popup.style.display = "block";
+closeBtn.onclick = () => popup.style.display = "none";
+window.onclick = (event) => {
+    if (event.target === popup) popup.style.display = "none";
+}
+</script>
+
+<section class="about-section">
+    <div class="about-card">
+        <div class="about-text">
+            <h2>About Me ༉‧₊˚.</h2>
+            <p>•Name: Nur Amalia Zafira </p>
+            <p>•Age: 20 Years Old</p>
+            <p>•Place of Birth: Shah Alam, Selangor </p>
+            <p>Hello! I'm Zafira, a final-year Information Management student. I've developed expertise in record management, library sciences, and information systems.</p>
+            <p>My passion is constantly learning and growing, whether through books, new experiences, or creative endeavors. One of my favorite pastimes is reading .</p>
+
+            <a href="RESUME NUR AMALIA ZAFIRA BINTI MOHD NIZAM (1).pdf" class="resume-btn" download>
+    <i class="fas fa-download"></i> Download My Resume
+</a>
+        </div>
+
+        <div class="about-photo">
+            <div class="slideshow-container">
+                <img src="k1.jpg" class="slide fade">
+                <img src="k3.jpg" class="slide fade">
+                <img src="k2.jpg" class="slide fade">
+                <img src="k.jpg" class="slide fade">
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+</section>
+
+<section class="fun-facts">
+    <h2>  ୨⎯ Fun Facts About Me ⎯୧</h2>
+    <div class="fact-container">
+        <div class="fact">
+            <h3>1. Foods</h3>
+            <ul class="food-bullet">
+                <li>I hate taugeh</li>
+                <li>I hate soya bean</li>
+                <li>I love eating Breakfast</li>
+                <li>I don't eat carbonara</li>
+                <li>loves pineapple on pizza</li>
+                <li>Fries are my spirit foods.</li>
+            </ul>
+        </div>
+        <div class="fact">
+            <h3>2. Animals</h3>
+            <ul class="animal-bullet">
+                <li>I’m scared of stray cats</li>
+                <li>I hate lizards</li>
+                <li>Turtles are my spirit animal</li>
+                <li>I can pet fish only</li>
+            </ul>
+        </div>
+        <div class="fact">
+            <h3>3. Behaviour</h3>
+            <ul class="behavior-bullet">
+                <li>I'm a morning person</li>
+                <li> I’ll talk a lot when im nervous</li>
+                <li>I overthink everything</li>
+                <li>I like shopping </li>
+            </ul>
+        </div>
+
+        <div class="fact video-section">
+            <h3>MY MOTIVATION VIDEO</h3>
+            <div class="video-thumbnail">
+                <a href="https://www.youtube.com/watch?v=_ZqJjlnGSSo" target="_blank">
+                    <img src="yt.png" alt="Watch Video" />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content-section">
+     <div id="current-time"></div>
+    <table>
+        <caption>𐙚⋆.˚𝑴𝒀 𝑾𝑬𝑬𝑲𝑳𝒀 𝑺𝑪𝑯𝑬𝑫𝑼𝑳𝑬˚.⋆𐙚</caption>
+    
+
+    <script>
+        function updateTime() {
+            const currentDate = new Date();
+            
+            // day, date, and time
+            const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            const dayOfWeek = days[currentDate.getDay()];
+            const date = currentDate.getDate();
+            const month = currentDate.getMonth() + 1; // months are 0-11
+            const year = currentDate.getFullYear();
+            
+            const hours = currentDate.getHours();
+            const minutes = currentDate.getMinutes();
+            const seconds = currentDate.getSeconds();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const hour = hours % 12;
+            const hourFormatted = hour ? hour : 12;  // Adjust for 12:00 PM
+            const minuteFormatted = minutes < 10 ? '0' + minutes : minutes;
+            const secondFormatted = seconds < 10 ? '0' + seconds : seconds;
+
+            // Combine day, date, and time into one string
+            const dateString = `${dayOfWeek}, ${date}/${month}/${year}`;
+            const timeString = `${hourFormatted}:${minuteFormatted}:${secondFormatted} ${ampm}`;
+
+            // Display the full date and time
+            document.getElementById('current-time').textContent = `${dateString} | ${timeString}`;
+        }
+
+        setInterval(updateTime, 1000);  // Update the time every second
+    </script>
+
+         <tr>
+        <th>Time</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+    </tr>
+    <tr>
+        <td>8.00 A.M</td>
+        <td rowspan="5">No Class</td> <!-- Rowspan added for Saturday -->
+        <td rowspan="5">No Class</td> <!-- Rowspan added for Sunday -->
+        <td>IMD 318</td>
+        <td>
+        <ul>
+                <li>• Breakfast</li>
+                <li>• Rest</li>
+            </ul>
+            </td>
+        <td>No Class</td>
+        <td>No Class</td>
+        <td>IMD 317</td>
+    </tr>
+    <tr>
+        <td>10.00 A.M</td>
+        <td>Breakfast</td>
+        <td>IMD313</td>
+        <td>
+            <ul>
+                <li>• Breakfast</li>
+                <li>• Rest</li>
+            </ul>
+        </td>
+        <td>IMD313</td>
+        <td>Sleep</td>
+       
+    </tr>
+    <tr>
+        <td>11.00 A.M</td>
+        <td>IMD316</td>
+        <td>Eat</td>
+        <td>No class</td>
+        <td>Eat</td>
+        <td>Tea time</td>
+        
+    </tr>
+    <tr>
+        <td>2.00 P.M</td>
+        <td>Lunch</td>
+        <td>IMD317</td>
+        <td>
+            <ul>
+                <li>• Study for IMD 318</li>
+                <li>• Review lecture notes</li>
+            </ul>
+        </td>
+        <td>Lunch</td>
+        <td>Assignment</td>
+        
+    </tr>
+    <tr>
+        <td>5.00 P.M</td>
+        <td>No Class</td>
+        <td>Brisk walk</td>
+        <td>Jogging</td>
+        <td>Tea time</td>
+        <td>Brisk walk</td>
+      
+        </tr>
+    </table>
+</div>
+<footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://www.instagram.com/zafirayoyo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://open.spotify.com/user/98fjp6cdsr6xd4yai4l6mka3d?si=f7f2255ace874f2c" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://x.com/zafirayoyo" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/amaliayaya16/_profile/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+
+      </div>
+      <div class="footerNav">
+        <ul>
+           <li><a href="">Home</a></li> 
+           <li><a href="">Email Me</a></li> 
+           <li><a href="https://web.telegram.org/k/">Telegram Me</a></li> 
+        </ul>
+   </div>
+   <div class="footerBottom">
+    <p>Copyright &copy;2025; Designed by <span class="designer">Zafira</span></p>
+   </div>
+</footer>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000); 
+}
+</script>
+</body>
+</html>
